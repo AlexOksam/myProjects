@@ -1,3 +1,7 @@
+--
+-- Microsoft SQL Server database
+--
+
 CREATE DATABASE number_guess;
 
 USE number_guess;
@@ -8,12 +12,10 @@ CREATE TABLE dbo.games (
     user_id INT
 );
 
-
 CREATE TABLE dbo.users (
     user_id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     username VARCHAR(25) NOT NULL
 );
-
 
 ALTER TABLE dbo.users
     ADD CONSTRAINT users_username_key UNIQUE (username);
